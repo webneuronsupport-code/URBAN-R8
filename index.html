@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban R8 | Inmobiliaria y Constructora</title>
+    <meta name="description" content="Urban R8 - Hacemos que tus sueños sucedan. Soluciones en construcción, tablaroca y carpintería.">
+    <link rel="stylesheet" href="urban-style-cinematic.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Double-Tier Header -->
+    <header class="header site-header" id="header">
+        <!-- Top Tier (Contact & Logo) -->
+        <div class="header-top">
+            <div class="container header-top-container">
+                <div class="logo">
+                    <a href="#">
+                        <i class="ph-fill ph-buildings"></i> URBAN <span>R8</span>
+                    </a>
+                </div>
+                <div class="header-contact-info">
+                    <div class="social-icons">
+                        <a href="#"><i class="ph ph-whatsapp-logo"></i></a>
+                        <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph ph-youtube-logo"></i></a>
+                        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                    </div>
+                    <div class="contact-details">
+                        <strong>33 1000 0001</strong>
+                        <span>contacto@urbanr8.com</span>
+                    </div>
+                </div>
+                <div class="header-quick-search">
+                    <div class="quick-search-box">
+                        <input type="text" placeholder="Buscar propiedades">
+                        <button><i class="ph ph-magnifying-glass"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Tier (Navigation) -->
+        <div class="header-bottom">
+            <div class="container header-bottom-container">
+                <nav class="nav" id="nav-menu">
+                    <a href="index.html" class="nav-link active">Inicio</a>
+                    <a href="#catalogo" class="nav-link">Ventas</a>
+                    <a href="#catalogo" class="nav-link">Rentas</a>
+                    <a href="construccion.html" class="nav-link">Construcción</a>
+                    <a href="#contacto" class="nav-link">Contáctanos</a>
+                </nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="ph ph-list"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Cinematic Glassmorphism Hero -->
+        <section id="inicio" class="cinematic-hero">
+            <!-- Background Image with Overlay -->
+            <div class="cinematic-bg"></div>
+            
+            <div class="container cinematic-container">
+                <div class="cinematic-content text-center">
+                    <div class="cinematic-badge">
+                        <span class="badge-dot"></span> EXCLUSIVIDAD EN BIENES RAÍCES
+                    </div>
+                    <h1 class="cinematic-title">Urban <em>R8</em></h1>
+                    <p class="cinematic-subtitle">Encuentra tu nueva casa para comprar o rentar.</p>
+                </div>
+
+                <!-- Glassmorphism Search Panel -->
+                <div class="glass-search-panel">
+                    <div class="glass-search-grid">
+                        <div class="glass-form-group">
+                            <label>Operación</label>
+                            <select id="filter-type">
+                                <option value="all">Todas</option>
+                                <option value="venta">Venta</option>
+                                <option value="renta">Renta</option>
+                            </select>
+                        </div>
+                        
+                        <div class="glass-form-group">
+                            <label>Ubicación</label>
+                            <select id="filter-zone">
+                                <option value="all">Todas las zonas</option>
+                                <option value="zapopan">Zapopan</option>
+                                <option value="guadalajara">Guadalajara</option>
+                                <option value="tlajomulco">Tlajomulco</option>
+                            </select>
+                        </div>
+                        
+                        <div class="glass-form-group">
+                            <label>Presupuesto</label>
+                            <select id="filter-price">
+                                <option value="all">Sin límite</option>
+                                <option value="low">Hasta $3M MXN</option>
+                                <option value="mid">$3M - $7M MXN</option>
+                                <option value="high">Más de $7M MXN</option>
+                            </select>
+                        </div>
+
+                        <button class="glass-search-btn" onclick="document.getElementById('catalogo').scrollIntoView({behavior: 'smooth'})">
+                            Buscar <i class="ph-bold ph-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Catalog Section -->
+        <section id="catalogo" class="catalog-section section">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Propiedades Exclusivas</h2>
+                    <p class="section-subtitle">Encuentra tu próximo hogar o inversión ideal con nuestro buscador inteligente.</p>
+                </div>
+
+
+
+                <!-- Properties Grid -->
+                <div id="properties-grid" class="properties-grid">
+                    <!-- Cards will be injected by JavaScript -->
+                </div>
+                
+                <!-- No Results Message (Hidden by default) -->
+                <div id="no-results" class="no-results hidden">
+                    <i class="ph ph-house-line"></i>
+                    <h3>No encontramos coincidencias exactas</h3>
+                    <p>Pero tenemos opciones exclusivas fuera del catálogo. ¡Contáctanos y la encontraremos por ti!</p>
+                    <a href="#contacto" class="btn-primary">Hablar con un asesor</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Section -->
+        <section id="ubicacion" class="location-section">
+            <div class="location-map"></div>
+            <div class="location-content">
+                <h2 class="section-title" style="-webkit-text-fill-color: var(--text-main); background: none;">UBICACIÓN</h2>
+                <p class="location-address">Av. Base Aérea 879, El Triángulo,<br>45200 Zapopan, Jal.</p>
+                
+                <div class="location-apps">
+                    <p>Ver en:</p>
+                    <div class="apps-links">
+                        <a href="https://waze.com/ul" target="_blank" class="app-btn">
+                            <i class="ph-fill ph-navigation-arrow"></i> Waze
+                        </a>
+                        <a href="https://maps.google.com/?q=Av.+Base+Aerea+879,+Zapopan" target="_blank" class="app-btn">
+                            <i class="ph-fill ph-map-pin"></i> Google Maps
+                        </a>
+                    </div>
+                </div>
+                
+                <a href="#contacto" class="btn-primary mt-4" style="max-width: 300px;">Conoce más del proyecto</a>
+            </div>
+        </section>
+
+        <!-- CTA Divider -->
+        <section class="cta-divider">
+            <div class="container text-center">
+                <h2>¿Tienes un proyecto en mente?</h2>
+                <p>Déjanos ayudarte a construirlo con la máxima calidad y eficiencia.</p>
+                <a href="#contacto" class="btn-primary mt-4">Hablar con un experto</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h2 class="section-title">Contáctanos</h2>
+                        <p class="section-subtitle">Ponte en contacto para una asesoría personalizada y cotización sin compromiso. ¡Estamos listos para empezar!</p>
+                        
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="icon"><i class="ph ph-map-pin"></i></div>
+                                <div>
+                                    <h4>Visítanos</h4>
+                                    <p>Av. Base Aérea no. 879, Zapopan, Jalisco.</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon"><i class="ph ph-phone"></i></div>
+                                <div>
+                                    <h4>Llámanos</h4>
+                                    <p>33 10 06 90 34 | 33 51 30 28 85<br>33 51 30 28 69 | 33 45 73 28 56</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="icon"><i class="ph ph-envelope"></i></div>
+                                <div>
+                                    <h4>Escríbenos</h4>
+                                    <p>urbanr8@outlook.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links mt-4">
+                            <h4>Síguenos en redes</h4>
+                            <a href="https://www.instagram.com/urbanr8/" target="_blank" class="social-btn">
+                                <i class="ph ph-instagram-logo"></i> @urbanr8
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form">
+                            <h3>Envíanos un mensaje</h3>
+                            <div class="form-group">
+                                <label for="name">Nombre completo</label>
+                                <input type="text" id="name" placeholder="Tu nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono / WhatsApp</label>
+                                <input type="tel" id="phone" placeholder="Tu teléfono" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Servicio de interés</label>
+                                <select id="service" required>
+                                    <option value="" disabled selected>Selecciona un servicio...</option>
+                                    <option value="comprar">Comprar Propiedad</option>
+                                    <option value="vender">Vender mi Propiedad</option>
+                                    <option value="rentar">Rentar Propiedad</option>
+                                    <option value="construccion">Construcción y Remodelación</option>
+                                    <option value="tablaroca_carpinteria">Tablaroca y Carpintería</option>
+                                    <option value="arquitectura">Diseño Arquitectónico</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje (Opcional)</label>
+                                <textarea id="message" rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-full">Enviar Cotización</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="ph-fill ph-buildings"></i> URBAN <span>R8</span>
+                    </div>
+                    <p>Inmobiliaria y Constructora. Hacemos que tus sueños sucedan con calidad y excelencia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Urban R8. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+    <script src="main.js?v=3"></script>
+
+    <!-- Chatwoot Widget -->
+    <script>
+      window.chatwootSettings = {"position":"right","type":"expanded_bubble","launcherTitle":""};
+      (function(d,t) {
+        var BASE_URL="https://orion.webneuron.com.mx";
+        var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=BASE_URL+"/packs/js/sdk.js";
+        g.async = true;
+        s.parentNode.insertBefore(g,s);
+        g.onload=function(){
+          window.chatwootSDK.run({
+            websiteToken: 'dKUtPiatQvm2UQ2MgYPj4iHT',
+            baseUrl: BASE_URL
+          })
+        }
+      })(document,"script");
+    </script>
+</body>
+</html>

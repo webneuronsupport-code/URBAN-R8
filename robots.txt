@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /enviar_contacto.php
+Disallow: /enviar_propiedad.php
+Disallow: /enviar_correo.php
+Disallow: /lib/
+
+Sitemap: https://urbanr8.com.mx/sitemap.xml
